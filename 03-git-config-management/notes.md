@@ -1,12 +1,26 @@
-# 03 — Git Config Management
+# 🔧 03 — Git Config Management
 
-## Objective
+> **Git Learning Journey 🚀**
 
-Learn how to configure Git for your user identity, editor, colors, line endings, aliases, and repository-specific settings.
+Git configuration controls how Git behaves on your system and inside individual repositories.
+In this lab, we’ll learn how to configure **identity, editor, colors, line endings, aliases, and repository-specific settings**.
 
 ---
 
-## 1. Lab Setup
+## 🎯 Objective
+
+Learn how to configure Git for:
+
+* 👤 User identity
+* 🎨 Git colors
+* ✍️ Default editor
+* 📄 Line endings
+* ⚡ Git aliases
+* 📦 Repository-specific settings
+
+---
+
+# 1. 🧪 Lab Setup
 
 Create the lab directory and initialize it as a Git repository:
 
@@ -27,7 +41,7 @@ You should see that you are on a Git branch and that there are no commits yet.
 
 ---
 
-## 2. View Git Configuration
+# 2. 🔍 View Git Configuration
 
 See all available Git settings:
 
@@ -43,52 +57,52 @@ git config user.name
 
 ---
 
-## 3. Git Configuration Levels
+# 3. 🏗️ Git Configuration Levels
 
 Git has three main configuration levels:
 
-| Level  | Applies to                  |
-| ------ | --------------------------- |
-| System | Everyone on the machine     |
-| Global | Your user account           |
-| Local  | Only the current repository |
+| Level         | Applies to                  |
+| ------------- | --------------------------- |
+| 🌐 **System** | Everyone on the machine     |
+| 👤 **Global** | Your user account           |
+| 📦 **Local**  | Only the current repository |
 
-The order of priority is:
+### Priority
 
 ```text
 System → Global → Local
 ```
 
-A **local** setting overrides a **global** setting.
+> ⭐ A **local** setting overrides a **global** setting.
 
 ---
 
-## 4. Set Your Git Identity
+# 4. 👤 Set Your Git Identity
 
-Set your name globally:
+Git uses your name and email when creating commits.
+
+### Set your name globally
 
 ```bash
 git config --global user.name "Your Name"
 ```
 
-Set your email:
+### Set your email globally
 
 ```bash
 git config --global user.email "your.email@example.com"
 ```
 
-Verify them:
+### Verify them
 
 ```bash
 git config --global user.name
 git config --global user.email
 ```
 
-Git uses this information when creating commits.
-
 ---
 
-## 5. Enable Git Colors
+# 5. 🎨 Enable Git Colors
 
 Enable colored Git output:
 
@@ -104,9 +118,9 @@ git config --global color.ui
 
 ---
 
-## 6. Set the Default Editor
+# 6. ✍️ Set the Default Editor
 
-For example, use Nano:
+For example, use **Nano**:
 
 ```bash
 git config --global core.editor nano
@@ -118,7 +132,7 @@ Check it:
 git config --global core.editor
 ```
 
-When Nano opens:
+### 📝 When Nano opens
 
 ```text
 Ctrl + X
@@ -128,7 +142,7 @@ Enter
 
 ---
 
-## 7. Configure Line Endings
+# 7. 📄 Configure Line Endings
 
 On Ubuntu/Linux, a common setting is:
 
@@ -146,11 +160,13 @@ This helps Git handle files created on different operating systems.
 
 ---
 
-## 8. Create Git Aliases
+# 8. ⚡ Create Git Aliases
 
-Aliases let you create shorter commands.
+Aliases let you create shorter Git commands.
 
-Create a shortcut for `git status`:
+## 🔹 Alias for `git status`
+
+Create a shortcut:
 
 ```bash
 git config --global alias.st status
@@ -162,7 +178,11 @@ Now you can use:
 git st
 ```
 
-Create a shortcut for a graphical log:
+---
+
+## 🔹 Alias for Graphical Log
+
+Create a shortcut:
 
 ```bash
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -174,7 +194,7 @@ Use it with:
 git lg
 ```
 
-Check your aliases:
+### 🔎 Check your aliases
 
 ```bash
 git config --global alias.st
@@ -183,9 +203,9 @@ git config --global alias.lg
 
 ---
 
-## 9. Repository-Specific Configuration
+# 9. 📦 Repository-Specific Configuration
 
-You can configure Git only for the current repository.
+Git allows you to configure settings only for the current repository.
 
 Make sure you are inside the lab repository:
 
@@ -193,55 +213,55 @@ Make sure you are inside the lab repository:
 cd ~/git-labs-vijay/03-git-config-management
 ```
 
-Set a local username:
+### Set a local username
 
 ```bash
 git config user.name "Lab User"
 ```
 
-Check the local value:
+### Check the local value
 
 ```bash
 git config user.name
 ```
 
-Compare it with your global username:
+### Compare it with your global username
 
 ```bash
 git config --global user.name
 ```
 
-The local value takes priority inside this repository.
+> ⭐ The **local value takes priority** inside this repository.
 
 ---
 
-## 10. Useful Commands
+# 10. 🛠️ Useful Git Config Commands
 
-View all configuration:
+### 📋 View all configuration
 
 ```bash
 git config --list
 ```
 
-View global configuration:
+### 🌐 View global configuration
 
 ```bash
 git config --global --list
 ```
 
-View local configuration:
+### 📦 View local configuration
 
 ```bash
 git config --local --list
 ```
 
-Check where a setting comes from:
+### 🔎 Check where a setting comes from
 
 ```bash
 git config --show-origin --list
 ```
 
-Get a specific setting:
+### 🎯 Get a specific setting
 
 ```bash
 git config user.name
@@ -250,9 +270,9 @@ git config user.email
 
 ---
 
-## Beginner Troubleshooting
+# 🆘 Beginner Troubleshooting
 
-### `git: command not found`
+## ❌ `git: command not found`
 
 Git may not be installed.
 
@@ -263,7 +283,9 @@ sudo apt update
 sudo apt install git
 ```
 
-### `fatal: not a git repository`
+---
+
+## ❌ `fatal: not a git repository`
 
 You are probably outside the Git repository.
 
@@ -279,7 +301,9 @@ Then move into the lab:
 cd ~/git-labs-vijay/03-git-config-management
 ```
 
-### Global and local names are different
+---
+
+## ⚠️ Global and Local Names Are Different
 
 This is expected.
 
@@ -290,9 +314,11 @@ git config --global user.name
 git config user.name
 ```
 
-The local setting wins inside the repository.
+The **local setting wins** inside the repository.
 
-### Alias does not work
+---
+
+## ❌ Alias Does Not Work
 
 Check whether the alias exists:
 
@@ -308,7 +334,7 @@ git st
 
 ---
 
-## Quick Configuration Check
+# ✅ Quick Configuration Check
 
 Run these commands to review your setup:
 
@@ -323,34 +349,98 @@ git config --global alias.st
 
 ---
 
-## Mental Model
+# 🧠 Mental Model
 
-Think of Git configuration as your Git **control panel**:
+Think of Git configuration as your Git **control panel** 🎛️:
 
 ```text
 Git
-├── Identity
+├── 👤 Identity
 │   ├── user.name
 │   └── user.email
-├── Appearance
+│
+├── 🎨 Appearance
 │   └── color.ui
-├── Editor
+│
+├── ✍️ Editor
 │   └── core.editor
-├── File handling
+│
+├── 📄 File handling
 │   └── core.autocrlf
-└── Shortcuts
+│
+└── ⚡ Shortcuts
     ├── alias.st
     └── alias.lg
 ```
 
-Most settings can be configured globally, while repository-specific settings can override them locally.
+Most settings can be configured **globally**, while repository-specific settings can **override them locally**.
 
-## Key Takeaways
+---
 
-* `git config` controls Git's behavior.
-* `--global` applies settings to your user account.
-* Local settings apply only to the current repository.
-* Local configuration overrides global configuration.
-* Git identity is stored with your commits.
-* Aliases make frequently used commands shorter.
-* `git config --list` is useful for checking your setup.
+# 🔑 Key Takeaways
+
+### ⭐ Important Commands
+
+| Command                                   | Purpose                                   |
+| ----------------------------------------- | ----------------------------------------- |
+| `git config --list`                       | 📋 View all Git configuration             |
+| `git config user.name`                    | 👤 Get current repository username        |
+| `git config user.email`                   | 📧 Get current repository email           |
+| `git config --global user.name "Name"`    | 👤 Set global username                    |
+| `git config --global user.email "Email"`  | 📧 Set global email                       |
+| `git config --global color.ui auto`       | 🎨 Enable Git colors                      |
+| `git config --global core.editor nano`    | ✍️ Set Nano as editor                     |
+| `git config --global core.autocrlf input` | 📄 Configure line-ending handling         |
+| `git config --global alias.st status`     | ⚡ Create `git st` alias                   |
+| `git config --global alias.lg "..."`      | 📊 Create graphical log alias             |
+| `git config --global --list`              | 🌐 View global configuration              |
+| `git config --local --list`               | 📦 View repository-specific configuration |
+| `git config --show-origin --list`         | 🔎 Show where settings come from          |
+
+### 🧠 Remember
+
+```text
+System → Global → Local
+                    ↑
+              Highest priority
+```
+
+* 🔧 `git config` controls Git's behavior.
+* 🌐 `--global` applies settings to your user account.
+* 📦 Local settings apply only to the current repository.
+* ⭐ Local configuration overrides global configuration.
+* 👤 Git identity is stored with your commits.
+* ⚡ Aliases make frequently used commands shorter.
+* 🔍 `git config --list` is useful for checking your setup.
+
+---
+
+## 📌 Quick Revision
+
+```text
+Git Config
+│
+├── 👤 Identity
+│   ├── user.name
+│   └── user.email
+│
+├── 🎨 Appearance
+│   └── color.ui
+│
+├── ✍️ Editor
+│   └── core.editor
+│
+├── 📄 Line Endings
+│   └── core.autocrlf
+│
+├── ⚡ Aliases
+│   ├── alias.st → status
+│   └── alias.lg → graphical log
+│
+└── 📦 Configuration Levels
+    ├── System
+    ├── Global
+    └── Local ⭐
+```
+
+**Core idea:** Configure Git globally for your normal workflow, and use **local repository configuration** when a project needs different behavior.
