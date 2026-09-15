@@ -1,3 +1,20 @@
+# CONTENTS
+
+| | |
+|---|---|
+| [Chapter_01](./01-your-first-git-lab/notes.md) | [Chapter_02](./02-operation-quantum-leap/notes.md) |
+| [Chapter_03](./03-git-config-management/notes.md) | [Chapter_04](./04-time-machine-identity-configuration/notes.md) |
+| [Chapter_05](./05-working-with-files-and-staging-area/notes.md) | [Chapter_06](./06-the-time-travelers-suitcase/notes.md) |
+| [Chapter_07](./07-git-branch-basic-operations/notes.md) | [Chapter_08](./08-the-time-travelers-dilemma/notes.md) |
+| [Chapter_09](./09-advanced-git-commit-operations/notes.md) | [Chapter_10](./10-rewriting-history/notes.md) |
+| [Chapter_11](./11-saving-work-in-progress/notes.md) | [Chapter_12](./12-the-time-traveling-developer/notes.md) |
+| [Chapter_13](./13-marking-important-milestones/notes.md) | [Chapter_14](./14-tagging-your-projects-history/notes.md) |
+| [Chapter_15](./15-git-history-and-log-management/notes.md) | [Chapter_16](./16-git-time-detective/notes.md) |
+| [Chapter_17](./17-git-diff-deep-dive/notes.md) | [Chapter_18](./18-uncover-the-secret-code-changes/notes.md) |
+| [Chapter_19](./19-git-reset-and-reflog/notes.md) | [Chapter_20](./20-recover-the-lost-files/notes.md) |
+
+
+
 # Setting up things: <br>
 📁 **git-labs-vijay** folder created on Desktop <br>
 💻 VS Code installed <br>
