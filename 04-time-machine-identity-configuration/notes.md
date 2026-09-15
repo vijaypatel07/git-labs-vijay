@@ -1,4 +1,13 @@
 # 04 — Time Machine Identity Configuration
+## Key Takeaways
+
+* `git config --global` sets user-wide Git settings.
+* `git config` inside a repository sets local settings.
+* Local settings override global settings.
+* You can override only one part of your identity, such as `user.name`.
+* `git config --local --list` shows repository-specific settings.
+* `git config --global --list` shows global settings.
+
 
 ## Objective
 
@@ -271,11 +280,3 @@ Global Git Identity
 
 So the `04-time-machine-identity-configuration` repository uses **Temporal Agent Bob**, while other repositories can continue using **vijay patel**.
 
-## Key Takeaways
-
-* `git config --global` sets user-wide Git settings.
-* `git config` inside a repository sets local settings.
-* Local settings override global settings.
-* You can override only one part of your identity, such as `user.name`.
-* `git config --local --list` shows repository-specific settings.
-* `git config --global --list` shows global settings.

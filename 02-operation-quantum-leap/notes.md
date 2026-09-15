@@ -1,26 +1,71 @@
-# 02 — Operation Quantum Leap
+# ⚡ 02 — Operation Quantum Leap
 
-## 🎯 Objective
+> **Git Learning Journey**
 
-Practice the basic Git workflow:
+This lesson covers the **basic Git workflow**: creating a project, initializing Git, staging changes, committing them, and verifying Git history.
+
+The core flow is:
 
 ```text
 Create → Initialize → Add → Stage → Commit → Verify
 ```
 
-You'll practice:
+---
 
-* Creating a project directory
-* Initializing a Git repository
-* Creating a file with specific content
-* Staging changes
-* Creating a commit
-* Checking Git history
-* Verifying your work
+## 🎯 Objective
+
+Practice the basic Git workflow:
+
+* 📁 Create a project directory
+* 🧰 Initialize a Git repository
+* 📄 Create a file with specific content
+* ➕ Stage changes
+* 💾 Create a commit
+* 📜 Check Git history
+* ✅ Verify your work
 
 ---
 
-# 1. Create the Project Directory
+# 🔑 Key Takeaways
+
+### 📌 Essential Git Commands
+
+| Command                           | Purpose                               |
+| --------------------------------- | ------------------------------------- |
+| `mkdir <directory>`               | 📁 Create a directory                 |
+| `cd <directory>`                  | 🚶 Move into a directory              |
+| `pwd`                             | 📍 Show current location              |
+| `git init`                        | 🧰 Initialize a Git repository        |
+| `ls -la`                          | 👀 Show files, including hidden files |
+| `echo "content" > file.txt`       | 📄 Create/write content to a file     |
+| `cat file.txt`                    | 📖 Display file contents              |
+| `git status`                      | 🔍 Check repository status            |
+| `git add <file>`                  | ➕ Stage a file                        |
+| `git commit -m "message"`         | 💾 Create a commit                    |
+| `git log`                         | 📜 View Git history                   |
+| `git log --oneline`               | 📜 View compact Git history           |
+| `git log --oneline -1`            | 🔎 View the latest commit             |
+| `git commit --amend -m "message"` | ✏️ Correct the latest commit message  |
+
+### 🧠 Most Important Concept
+
+```text
+Working Directory
+       │
+       │ git add
+       ▼
+Staging Area
+       │
+       │ git commit
+       ▼
+Git Repository
+```
+
+> **`git add` prepares changes. `git commit` saves them to Git history.**
+
+---
+
+# 1️⃣ Create the Project Directory
 
 Move to the project directory:
 
@@ -54,7 +99,7 @@ Expected location:
 
 ---
 
-# 2. Initialize the Git Repository
+# 2️⃣ Initialize the Git Repository
 
 Initialize Git:
 
@@ -76,13 +121,13 @@ You should see:
 .git
 ```
 
-### Key idea
+### 💡 Key Idea
 
 `git init` turns an existing directory into a Git repository.
 
 ---
 
-# 3. Create the Classified File
+# 3️⃣ Create the Classified File
 
 Create `classified.txt` with the required content:
 
@@ -102,7 +147,7 @@ Expected:
 The flux capacitor requires 1.21 gigawatts of power.
 ```
 
-### 💡 Shell concept
+### 💡 Shell Concept — `>`
 
 The `>` operator redirects command output into a file.
 
@@ -120,7 +165,7 @@ Hello
 
 ---
 
-# 4. Check Git Status
+# 4️⃣ Check Git Status
 
 Run:
 
@@ -130,11 +175,16 @@ git status
 
 Git should show `classified.txt` as an **untracked file**.
 
-An untracked file exists in your project directory, but Git isn't tracking it yet.
+### 🧠 What Does "Untracked" Mean?
+
+An untracked file:
+
+* 📁 Exists in your project directory
+* ❌ Is not being tracked by Git yet
 
 ---
 
-# 5. Stage the File
+# 5️⃣ Stage the File
 
 Stage the file:
 
@@ -154,7 +204,7 @@ The file should now appear under:
 Changes to be committed
 ```
 
-### Git workflow
+### 🧠 Git Workflow
 
 ```text
 Working Directory
@@ -168,13 +218,14 @@ Staging Area
 Git Repository
 ```
 
-`git add` does **not** create a commit. It prepares changes for the next commit.
+> ⚠️ `git add` does **not** create a commit.
+> It prepares changes for the next commit.
 
 ---
 
-# 6. Create the Commit
+# 6️⃣ Create the Commit
 
-Create the commit using the exact required message:
+Create the commit using the **exact required message**:
 
 ```bash
 git commit -m "Add top-secret flux capacitor information"
@@ -192,7 +243,7 @@ The actual hash will be different on your system.
 
 ---
 
-# 7. Verify the Commit
+# 7️⃣ Verify the Commit
 
 Check the repository:
 
@@ -222,72 +273,72 @@ The hash will differ, but the commit message should match exactly.
 
 ---
 
-# 🧠 Important Concepts
+# 🧠 Important Git Concepts
 
-| Concept           | Meaning                              |
-| ----------------- | ------------------------------------ |
-| Repository        | A directory managed by Git           |
-| `.git`            | Git's internal repository data       |
-| Working Directory | Your current project files           |
-| Untracked         | A file Git doesn't track yet         |
-| Staging Area      | Changes prepared for the next commit |
-| Commit            | A saved snapshot of staged changes   |
-| Commit Hash       | Unique identifier for a commit       |
-| Git History       | Collection of commits                |
+| Concept              | Meaning                              |
+| -------------------- | ------------------------------------ |
+| 📦 Repository        | A directory managed by Git           |
+| ⚙️ `.git`            | Git's internal repository data       |
+| 📁 Working Directory | Your current project files           |
+| ❓ Untracked          | A file Git doesn't track yet         |
+| 📋 Staging Area      | Changes prepared for the next commit |
+| 💾 Commit            | A saved snapshot of staged changes   |
+| 🔑 Commit Hash       | Unique identifier for a commit       |
+| 📜 Git History       | Collection of commits                |
 
 ---
 
 # 📝 Commands to Remember
 
-### Create a directory
+### 📁 Create a Directory
 
 ```bash
 mkdir 02-operation-quantum-leap
 ```
 
-### Move into it
+### 🚶 Move Into It
 
 ```bash
 cd 02-operation-quantum-leap
 ```
 
-### Initialize Git
+### 🧰 Initialize Git
 
 ```bash
 git init
 ```
 
-### Check status
+### 🔍 Check Status
 
 ```bash
 git status
 ```
 
-### Create a file
+### 📄 Create a File
 
 ```bash
 echo "content" > filename.txt
 ```
 
-### Stage a file
+### ➕ Stage a File
 
 ```bash
 git add filename.txt
 ```
 
-### Commit changes
+### 💾 Commit Changes
 
 ```bash
 git commit -m "Commit message"
 ```
 
-### View history
+### 📜 View History
 
 ```bash
 git log
 ```
 
-### View compact history
+### 📜 View Compact History
 
 ```bash
 git log --oneline
@@ -297,7 +348,7 @@ git log --oneline
 
 # 🎯 Exact Commit Messages
 
-When a challenge specifies an exact commit message, match it character-for-character.
+When a challenge specifies an exact commit message, match it **character-for-character**.
 
 Correct:
 
@@ -319,7 +370,7 @@ Add top-secret flux capacitor information.
 
 # 🛠️ Beginner-Friendly Troubleshooting
 
-## `git: command not found`
+## ❌ `git: command not found`
 
 Check whether Git is installed:
 
@@ -331,7 +382,7 @@ If Git isn't available, follow your environment's instructions for installing it
 
 ---
 
-## `fatal: not a git repository`
+## ❌ `fatal: not a git repository`
 
 You're probably outside the repository.
 
@@ -361,7 +412,7 @@ git init
 
 ---
 
-## `nothing to commit, working tree clean`
+## ℹ️ `nothing to commit, working tree clean`
 
 This is **not an error**.
 
@@ -375,7 +426,7 @@ git log --oneline
 
 ---
 
-## File is untracked
+## ❓ File Is Untracked
 
 If `git status` shows:
 
@@ -384,7 +435,7 @@ Untracked files:
     classified.txt
 ```
 
-stage it:
+Stage it:
 
 ```bash
 git add classified.txt
@@ -398,7 +449,7 @@ git status
 
 ---
 
-## Changes are not staged
+## ❓ Changes Are Not Staged
 
 If Git shows:
 
@@ -406,7 +457,7 @@ If Git shows:
 Changes not staged for commit
 ```
 
-stage the file again:
+Stage the file again:
 
 ```bash
 git add classified.txt
@@ -418,11 +469,13 @@ Then commit:
 git commit -m "Add top-secret flux capacitor information"
 ```
 
-Remember: if you modify a file **after** `git add`, the new modification needs to be staged again.
+### ⚠️ Important
+
+If you modify a file **after** `git add`, the new modification needs to be staged again.
 
 ---
 
-## Git asks for your name and email
+## 👤 Git Asks for Your Name and Email
 
 Configure your Git identity:
 
@@ -435,7 +488,7 @@ Then retry the commit.
 
 ---
 
-## Commit message is incorrect
+## ✏️ Commit Message Is Incorrect
 
 Check the latest commit:
 
@@ -466,10 +519,10 @@ git log --oneline -1
 
 Verify that:
 
-* You're inside `~/git-labs-vijay/02-operation-quantum-leap`
-* `classified.txt` contains the expected text
-* The working tree is clean
-* The latest commit has the required message
+* 📍 You're inside `~/git-labs-vijay/02-operation-quantum-leap`
+* 📄 `classified.txt` contains the expected text
+* ✅ The working tree is clean
+* 📜 The latest commit has the required message
 
 ---
 
@@ -491,8 +544,8 @@ Create or modify files
 git log --oneline
 ```
 
-Remember:
+### ⭐ Remember
 
 > **`git add` prepares changes. `git commit` saves them to Git history.**
 
-You've now completed another step in your Git journey. 🕰️⚡
+⚡ You've now completed another step in your Git learning journey.
